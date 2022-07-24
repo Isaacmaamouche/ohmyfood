@@ -1,0 +1,16 @@
+$color-primary: #9356dc;
+$color-secondary: #ff79da;
+$color-tertiary: #99e2d0;
+
+$color-linear: linear-gradient(0deg, $color-primary 30%, $color-secondary);
+
+$color-darkgrey: #353535;
+$color-grey: #eaeaea;
+$color-lightgrey: #f6f6f6;
+
+$color-label: #99e2d0;
+$color-label-text: #008463;
+
+$default-radius: 1rem;
+$default-shadow: 0px 2px 5px 1px rgb(0 0 0 / 15%);
+$transition: all 0.3s ease;

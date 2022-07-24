@@ -1,0 +1,9 @@
+@use "variables";
+header {
+  .back_arrow {
+    position: absolute;
+    top: 50%;
+    left: 1rem;
+    transform: translateY(-50%);
+  }
+}
