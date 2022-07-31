@@ -4,13 +4,15 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/style.css" />
+    <!-- <link rel="stylesheet" href="css/style.css" /> -->
+    <link rel="stylesheet" href="css/style_restaurants.css" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/fontawesome.min.css"
       integrity="sha384-zIaWifL2YFF1qaDiAo0JFgsmasocJ/rqu7LKYH8CoBEXqGbb9eO+Xi3s6fQhgFWM"
       crossorigin="anonymous"
     />
+
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js"
       integrity="sha512-6PM0qYu5KExuNcKt5bURAoT6KCThUmHRewN3zUFNaoI6Di7XJPTMoT6K0nsagZKk2OB4L7E3q1uQKHNHd4stIQ=="
@@ -30,11 +32,9 @@
     contact dans footer renvoie vers mailto:
  -->
   <body>
-    <div class="loader_layer"><span class="loader"></span></div>
+    <!-- <div class="loader_layer"><span class="loader"></span></div> -->
     <header>
-      <span class="back_arrow"
-        ><i class="fa-solid fa-arrow-left-long"></i
-      ></span>
+      <span class="back_arrow"><i class="fa-solid fa-arrow-left"></i></span>
       <img src="images/logo/ohmyfood@2x.svg" alt="oh my food" class="logo" />
     </header>
 
@@ -46,21 +46,164 @@
             alt=""
           />
         </div>
-        <div class="card_body">
-          <div class="card_name">
-            <h2>La palette du goût</h2>
-            <p>Ménilmontant</p>
+        <div class="card_content">
+          <div class="card_head">
+            <h1>La palette du goût</h1>
+            <div class="card_likeButton">
+              <span class="icon-hollow">
+                <i class="fa-regular fa-heart"></i>
+              </span>
+              <span class="icon-filled">
+                <i class="fa-solid fa-heart"></i>
+              </span>
+            </div>
           </div>
-          <div class="card_likeButton">
-            <span class="icon-hollow">
-              <i class="fa-regular fa-heart"></i>
-            </span>
-            <span class="icon-filled">
-              <i class="fa-solid fa-heart"></i>
-            </span>
+          <div class="card_body">
+            <div class="menu_composition">
+              <h2>Entrées</h2>
+              <ul>
+                <li>
+                  <div class="list_element">
+                    <div class="details">
+                      <h3>Tartare de poulpe acidulé</h3>
+                      <p class="desc">Aux zests d'orange</p>
+                    </div>
+                    <p class="price">25€</p>
+                  </div>
+                  <div class="list_element_hover">
+                    <span class="check_icon"
+                      ><i class="fa-solid fa-circle-check"></i
+                    ></span>
+                  </div>
+                </li>
+                <li>
+                  <div class="list_element">
+                    <div class="details">
+                      <h3>Velouté de légumes d'antan</h3>
+                      <p class="desc">Carotte, panais, topinambour</p>
+                    </div>
+                    <p class="price">35€</p>
+                  </div>
+                  <div class="list_element_hover">
+                    <span class="check_icon"
+                      ><i class="fa-solid fa-circle-check"></i
+                    ></span>
+                  </div>
+                </li>
+                <li>
+                  <div class="list_element">
+                    <div class="details">
+                      <h3>Soupe à l'oignon</h3>
+                      <p class="desc">Revisitée</p>
+                    </div>
+                    <p class="price">20€</p>
+                  </div>
+                  <div class="list_element_hover">
+                    <span class="check_icon"
+                      ><i class="fa-solid fa-circle-check"></i
+                    ></span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="menu_composition">
+              <h2>Plats</h2>
+              <ul>
+                <li>
+                  <div class="list_element">
+                    <div class="details">
+                      <h3>Coquilles Saint-Jacques</h3>
+                      <p class="desc">Accompagnées d'une purée de panais</p>
+                    </div>
+                    <p class="price">40€</p>
+                  </div>
+                  <div class="list_element_hover">
+                    <span class="check_icon"
+                      ><i class="fa-solid fa-circle-check"></i
+                    ></span>
+                  </div>
+                </li>
+                <li>
+                  <div class="list_element">
+                    <div class="details">
+                      <h3>Magret de canard</h3>
+                      <p class="desc">Et parmentier de pommes de terres</p>
+                    </div>
+                    <p class="price">35€</p>
+                  </div>
+                  <div class="list_element_hover">
+                    <span class="check_icon"
+                      ><i class="fa-solid fa-circle-check"></i
+                    ></span>
+                  </div>
+                </li>
+                <li>
+                  <div class="list_element">
+                    <div class="details">
+                      <h3>Pigeonneau d'Ille-et-Vilaine</h3>
+                      <p class="desc">Sur son lit de gnocchis aux légumes</p>
+                    </div>
+                    <p class="price">44€</p>
+                  </div>
+                  <div class="list_element_hover">
+                    <span class="check_icon"
+                      ><i class="fa-solid fa-circle-check"></i
+                    ></span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="menu_composition">
+              <h2>Desserts</h2>
+              <ul>
+                <li>
+                  <div class="list_element">
+                    <div class="details">
+                      <h3>Pétales de violettes glacés</h3>
+                      <p class="desc">Et purée de noisettes</p>
+                    </div>
+                    <p class="price">18€</p>
+                  </div>
+                  <div class="list_element_hover">
+                    <span class="check_icon"
+                      ><i class="fa-solid fa-circle-check"></i
+                    ></span>
+                  </div>
+                </li>
+                <li>
+                  <div class="list_element">
+                    <div class="details">
+                      <h3>Fondant au chocolat</h3>
+                      <p class="desc">Revisitée</p>
+                    </div>
+                    <p class="price">22€</p>
+                  </div>
+                  <div class="list_element_hover">
+                    <span class="check_icon"
+                      ><i class="fa-solid fa-circle-check"></i
+                    ></span>
+                  </div>
+                </li>
+                <li>
+                  <div class="list_element">
+                    <div class="details">
+                      <h3>Millefeuille croustillant</h3>
+                      <p class="desc">Myrtilles et pâte d'amande</p>
+                    </div>
+                    <p class="price">23€</p>
+                  </div>
+                  <div class="list_element_hover">
+                    <span class="check_icon"
+                      ><i class="fa-solid fa-circle-check"></i
+                    ></span>
+                  </div>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
+      <div><button class="order_button">Commander</button></div>
     </section>
 
     <footer>

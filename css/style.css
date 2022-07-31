@@ -9,14 +9,13 @@
   margin: 0;
 }
 
-/*
-    bouton:hover color lighten + shadow darker 
-    bouton j'aime animé au survorl et au clic 
-    loading spinner artificiel de 1s au couleur du site
-    apparition des menus move in escalier
-    les plats sont des checkbox 
-    text trop long = ... donc width exigé
-*/
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
 .main {
   position: relative;
 }
@@ -45,11 +44,12 @@
   background-color: white;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   z-index: 111;
   display: flex;
   animation: fade_out 2s linear forwards;
+  pointer-events: none;
 }
 .loader_layer .loader {
   margin: auto;
@@ -71,19 +71,14 @@
   border-radius: 50%;
 }
 
-.title {
-  font-family: "Shrikhand", cursive;
-}
-
 header {
   position: relative;
-  display: flex;
-  flex-direction: column;
 }
-header img {
-  display: inline-block;
+header .logo {
+  display: block;
   margin: auto;
-  padding-block: 1rem;
+  padding: 1rem;
+  height: 4rem;
 }
 header .location {
   width: 100%;
@@ -98,11 +93,6 @@ header .location p .location_icon {
   margin-inline: 0.5rem;
 }
 
-h1 {
-  font-weight: 700;
-  font-size: 1.3rem;
-}
-
 button {
   position: relative;
   background-color: #f6f6f6;
@@ -112,6 +102,49 @@ button {
   height: 50px;
   padding-block: 12px;
   cursor: pointer;
+}
+
+footer {
+  background-color: #353535;
+  padding: 1.5rem 1.5rem 2rem;
+  color: #f6f6f6;
+}
+footer img {
+  filter: invert(100%) contrast(5);
+  margin-bottom: 1rem;
+  height: 1.2rem;
+}
+footer p {
+  font-size: 1.1rem;
+  padding-bottom: 0.5rem;
+}
+footer span.footer_icon {
+  display: inline-block;
+  width: 1.5rem;
+  text-align: center;
+}
+footer a,
+footer a:visited,
+footer a:focus {
+  text-decoration: none;
+  color: inherit;
+}
+
+/*
+    bouton:hover color lighten + shadow darker 
+    bouton j'aime animé au survorl et au clic 
+    loading spinner artificiel de 1s au couleur du site
+    apparition des menus move in escalier
+    les plats sont des checkbox 
+    text trop long = ... donc width exigé
+*/
+.title {
+  font-family: "Shrikhand", cursive;
+}
+
+h1 {
+  font-size: 1.3rem;
+  font-weight: 700;
 }
 
 .hero {
@@ -139,7 +172,7 @@ button {
   line-height: 0;
   padding: 1rem;
   color: white;
-  background: linear-gradient(0deg, #9356dc 30%, #ff79da);
+  background: linear-gradient(0deg, #9356dc 5%, #ff79da);
 }
 
 .howTo {
@@ -282,32 +315,6 @@ button {
 }
 .restaurants .restaurants_container .restaurants_card .card_body .card_likeButton:hover .icon-hollow {
   opacity: 0;
-}
-
-footer {
-  background-color: #353535;
-  padding: 1.5rem 1rem;
-  color: white;
-}
-footer img {
-  filter: invert(100%);
-  margin-bottom: 1rem;
-  height: 1rem;
-}
-footer p {
-  font-size: 0.8rem;
-  padding-bottom: 0.5rem;
-}
-footer span.footer_icon {
-  display: inline-block;
-  width: 1.5rem;
-  text-align: center;
-}
-footer a,
-footer a:visited,
-footer a:focus {
-  text-decoration: none;
-  color: inherit;
 }
 
 /*# sourceMappingURL=style.css.map */
