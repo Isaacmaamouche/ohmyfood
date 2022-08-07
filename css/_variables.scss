@@ -18,6 +18,7 @@ $transition: all 0.3s ease;
 $max-width: 992px;
 
 @mixin styled_button {
+  transition: $transition;
   --size: 2.5rem;
   border-radius: calc(var(--size) / 2);
   height: var(--size);
@@ -25,4 +26,16 @@ $max-width: 992px;
   padding: 1rem;
   color: white;
   background: $color_linear;
+
+  background-size: 100% 125%;
+  background-position: 100% 0%;
+  box-shadow: none;
+  transform: translateY(0px);
+  @media (hover: hover) {
+    &:hover {
+      background-size: 100% 200%;
+      box-shadow: $default_shadow;
+      transform: translateY(-2px);
+    }
+  }
 }

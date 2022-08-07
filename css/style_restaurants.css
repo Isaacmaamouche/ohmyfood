@@ -322,6 +322,7 @@ body {
   display: block;
   margin: auto;
   margin-bottom: 4rem;
+  transition: all 0.3s ease;
   --size: 2.5rem;
   border-radius: calc(var(--size) / 2);
   height: var(--size);
@@ -329,11 +330,22 @@ body {
   padding: 1rem;
   color: white;
   background: linear-gradient(0deg, #9356dc 5%, #ff79da);
+  background-size: 100% 125%;
+  background-position: 100% 0%;
+  box-shadow: none;
+  transform: translateY(0px);
   font-weight: 500;
   --size: 3.5rem;
   font-size: 1.2rem;
   padding-block: calc(var(--size) / 2);
   padding-inline: var(--size);
+}
+@media (hover: hover) {
+  .main .order_button:hover {
+    background-size: 100% 200%;
+    box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+  }
 }
 
 /*# sourceMappingURL=style_restaurants.css.map */
