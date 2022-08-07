@@ -1,6 +1,17 @@
 @use "variables" as *;
 @use "style_global";
 
+@keyframes slide_fade_in {
+  0% {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
 header {
   .back_arrow {
     font-weight: bold;
@@ -10,6 +21,10 @@ header {
     left: 1rem;
     transform: translateY(-50%);
   }
+}
+
+body {
+  background-color: $color_lightgrey;
 }
 
 .restaurants_card {
@@ -29,6 +44,8 @@ header {
     background-color: $color_lightgrey;
     position: relative;
     top: -$content_border_radius;
+    max-width: $max-width;
+    margin: auto;
 
     .card_head {
       display: flex;
@@ -63,11 +80,13 @@ header {
           opacity: 1;
         }
         &:hover {
-          .icon-filled {
-            opacity: 1;
-          }
-          .icon-hollow {
-            opacity: 0;
+          @media (hover: hover) {
+            .icon-filled {
+              opacity: 1;
+            }
+            .icon-hollow {
+              opacity: 0;
+            }
           }
         }
       }
@@ -99,6 +118,11 @@ header {
         display: flex;
         gap: 1rem;
         flex-direction: column;
+        @for $i from 1 to 4 {
+          li:nth-child(0n + #{$i}) {
+            animation-delay: 2s + $i * 0.1;
+          }
+        }
         li {
           border-radius: $default_radius;
           box-shadow: $default_shadow;
@@ -107,6 +131,8 @@ header {
           flex-direction: row;
           justify-content: space-between;
           overflow: hidden;
+          opacity: 0;
+          animation: slide_fade_in 0.3s linear forwards;
 
           .list_element {
             display: flex;
@@ -156,18 +182,20 @@ header {
             }
           }
           &:hover {
-            .check_icon {
-              transform: rotateZ(0deg);
-            }
-            .list_element {
-              flex: 0 1 calc(100% - 65px);
-              .desc,
-              h3 {
-                // max-width: 200px;
-                overflow: hidden;
-                text-overflow: ellipsis;
-                white-space: nowrap;
-                width: calc(150px + 30vw - 60px);
+            @media (hover: hover) {
+              .check_icon {
+                transform: rotateZ(0deg);
+              }
+              .list_element {
+                flex: 0 1 calc(100% - 65px);
+                .desc,
+                h3 {
+                  // max-width: 200px;
+                  overflow: hidden;
+                  text-overflow: ellipsis;
+                  white-space: nowrap;
+                  width: calc(150px + 30vw - 60px);
+                }
               }
             }
           }
@@ -181,7 +209,7 @@ header {
   .order_button {
     display: block;
     margin: auto;
-    margin-bottom: 5rem;
+    margin-bottom: 4rem;
     @include styled_button;
     font-weight: 500;
     --size: 3.5rem;

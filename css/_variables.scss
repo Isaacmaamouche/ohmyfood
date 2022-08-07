@@ -15,6 +15,8 @@ $default_radius: 1rem;
 $default_shadow: 0px 2px 5px 1px rgb(0 0 0 / 15%);
 $transition: all 0.3s ease;
 
+$max-width: 992px;
+
 @mixin styled_button {
   --size: 2.5rem;
   border-radius: calc(var(--size) / 2);

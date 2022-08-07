@@ -1,6 +1,6 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap");
 * {
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
@@ -40,7 +40,7 @@ li {
   }
 }
 .loader_layer {
-  position: absolute;
+  position: fixed;
   background-color: white;
   top: 0;
   left: 0;
@@ -123,9 +123,10 @@ footer span.footer_icon {
   width: 1.5rem;
   text-align: center;
 }
-footer a,
-footer a:visited,
-footer a:focus {
+
+a,
+a:visited,
+a:focus {
   text-decoration: none;
   color: inherit;
 }
@@ -133,10 +134,7 @@ footer a:focus {
 /*
     bouton:hover color lighten + shadow darker 
     bouton j'aime animé au survorl et au clic 
-    loading spinner artificiel de 1s au couleur du site
-    apparition des menus move in escalier
     les plats sont des checkbox 
-    text trop long = ... donc width exigé
 */
 .title {
   font-family: "Shrikhand", cursive;
@@ -144,7 +142,8 @@ footer a:focus {
 
 h1 {
   font-size: 1.3rem;
-  font-weight: 700;
+  font-weight: 900;
+  margin-bottom: 1rem;
 }
 
 .hero {
@@ -156,7 +155,7 @@ h1 {
   text-align: center;
   padding-block: 4rem;
   padding-inline: 1rem;
-  margin-bottom: 2rem;
+  margin-bottom: 0.5rem;
 }
 .hero .hero_title {
   margin: 0;
@@ -176,26 +175,23 @@ h1 {
 }
 
 .howTo {
-  margin-inline: 1rem;
-  margin-block: 2rem;
+  padding: 2rem 1rem;
+  margin-inline: auto;
+  max-width: 992px;
 }
 .howTo .howTo_flex {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   gap: 2rem;
   justify-content: center;
-  padding: 1.5rem;
-}
-@media (max-width: 1024px) {
-  .howTo .howTo_flex {
-    flex-direction: column;
-    align-items: center;
-  }
+  padding: 1rem;
+  flex-wrap: wrap;
+  align-items: center;
 }
 .howTo .howTo_flex .howTo_steps {
   position: relative;
   min-width: 300px;
-  height: 3.5rem;
+  height: 4rem;
   transition: all 0.3s ease;
   font-weight: 700;
   text-align: left;
@@ -227,8 +223,12 @@ h1 {
 }
 
 .restaurants {
-  padding: 2rem 1rem;
+  padding: 3rem 1rem;
   background-color: #f6f6f6;
+  margin-inline: auto;
+  max-width: 992px;
+  box-shadow: 0 0 0 100vmax #f6f6f6;
+  clip-path: inset(0 -100vmax);
 }
 .restaurants .restaurants_container {
   display: grid;
@@ -268,7 +268,7 @@ h1 {
 }
 .restaurants .restaurants_container .restaurants_card .card_img {
   width: 100%;
-  height: 200px;
+  height: 160px;
   overflow: hidden;
 }
 .restaurants .restaurants_container .restaurants_card .card_img img {

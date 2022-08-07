@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap");
 * {
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
@@ -39,7 +39,7 @@ li {
   }
 }
 .loader_layer {
-  position: absolute;
+  position: fixed;
   background-color: white;
   top: 0;
   left: 0;
@@ -122,13 +122,24 @@ footer span.footer_icon {
   width: 1.5rem;
   text-align: center;
 }
-footer a,
-footer a:visited,
-footer a:focus {
+
+a,
+a:visited,
+a:focus {
   text-decoration: none;
   color: inherit;
 }
 
+@keyframes slide_fade_in {
+  0% {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
 header .back_arrow {
   font-weight: bold;
   font-size: 1.5rem;
@@ -136,6 +147,10 @@ header .back_arrow {
   top: 50%;
   left: 1rem;
   transform: translateY(-50%);
+}
+
+body {
+  background-color: #f6f6f6;
 }
 
 .restaurants_card .card_img {
@@ -153,6 +168,8 @@ header .back_arrow {
   background-color: #f6f6f6;
   position: relative;
   top: -2rem;
+  max-width: 992px;
+  margin: auto;
 }
 .restaurants_card .card_content .card_head {
   display: flex;
@@ -188,11 +205,13 @@ header .back_arrow {
 .restaurants_card .card_content .card_head .card_likeButton .icon-hollow {
   opacity: 1;
 }
-.restaurants_card .card_content .card_head .card_likeButton:hover .icon-filled {
-  opacity: 1;
-}
-.restaurants_card .card_content .card_head .card_likeButton:hover .icon-hollow {
-  opacity: 0;
+@media (hover: hover) {
+  .restaurants_card .card_content .card_head .card_likeButton:hover .icon-filled {
+    opacity: 1;
+  }
+  .restaurants_card .card_content .card_head .card_likeButton:hover .icon-hollow {
+    opacity: 0;
+  }
 }
 .restaurants_card .card_content .card_body .menu_composition:not(:last-child) {
   margin-bottom: 3.5rem;
@@ -219,6 +238,15 @@ header .back_arrow {
   gap: 1rem;
   flex-direction: column;
 }
+.restaurants_card .card_content .card_body ul li:nth-child(0n+1) {
+  animation-delay: 2.1s;
+}
+.restaurants_card .card_content .card_body ul li:nth-child(0n+2) {
+  animation-delay: 2.2s;
+}
+.restaurants_card .card_content .card_body ul li:nth-child(0n+3) {
+  animation-delay: 2.3s;
+}
 .restaurants_card .card_content .card_body ul li {
   border-radius: 1rem;
   box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.15);
@@ -227,6 +255,8 @@ header .back_arrow {
   flex-direction: row;
   justify-content: space-between;
   overflow: hidden;
+  opacity: 0;
+  animation: slide_fade_in 0.3s linear forwards;
 }
 .restaurants_card .card_content .card_body ul li .list_element {
   display: flex;
@@ -272,24 +302,26 @@ header .back_arrow {
   transition: all 0.3s ease;
   transform: rotateZ(-180deg);
 }
-.restaurants_card .card_content .card_body ul li:hover .check_icon {
-  transform: rotateZ(0deg);
-}
-.restaurants_card .card_content .card_body ul li:hover .list_element {
-  flex: 0 1 calc(100% - 65px);
-}
-.restaurants_card .card_content .card_body ul li:hover .list_element .desc,
+@media (hover: hover) {
+  .restaurants_card .card_content .card_body ul li:hover .check_icon {
+    transform: rotateZ(0deg);
+  }
+  .restaurants_card .card_content .card_body ul li:hover .list_element {
+    flex: 0 1 calc(100% - 65px);
+  }
+  .restaurants_card .card_content .card_body ul li:hover .list_element .desc,
 .restaurants_card .card_content .card_body ul li:hover .list_element h3 {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  width: calc(150px + 30vw - 60px);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: calc(150px + 30vw - 60px);
+  }
 }
 
 .main .order_button {
   display: block;
   margin: auto;
-  margin-bottom: 5rem;
+  margin-bottom: 4rem;
   --size: 2.5rem;
   border-radius: calc(var(--size) / 2);
   height: var(--size);

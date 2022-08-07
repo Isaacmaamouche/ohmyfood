@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- <link rel="stylesheet" href="css/style.css" /> -->
-    <link rel="stylesheet" href="css/style_restaurants.css" />
+    <link rel="stylesheet" href="../css/style_restaurants.css" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/fontawesome.min.css"
@@ -20,35 +20,34 @@
       referrerpolicy="no-referrer"
       defer
     ></script>
-    <title>À la française</title>
+    <title>Le délice des sens</title>
   </head>
   <!-- 
     //TODO
     validation W3C html et CSS
     compatibilité cross browser
-    header contient logo sur page accueil
     une page par menu
-    header contient bouton retour sur les pages de menu
-    contact dans footer renvoie vers mailto:
  -->
   <body>
-    <!-- <div class="loader_layer"><span class="loader"></span></div> -->
+    <div class="loader_layer"><span class="loader"></span></div>
     <header>
-      <span class="back_arrow"><i class="fa-solid fa-arrow-left"></i></span>
-      <img src="images/logo/ohmyfood@2x.svg" alt="oh my food" class="logo" />
+      <span class="back_arrow">
+        <a href="/"><i class="fa-solid fa-arrow-left"></i></a>
+      </span>
+      <img src="../images/logo/ohmyfood@2x.svg" alt="oh my food" class="logo" />
     </header>
 
     <section class="main">
       <div class="restaurants_card">
         <div class="card_img">
           <img
-            src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+            src="../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
             alt=""
           />
         </div>
         <div class="card_content">
           <div class="card_head">
-            <h1>La palette du goût</h1>
+            <h1>Le délice des sens</h1>
             <div class="card_likeButton">
               <span class="icon-hollow">
                 <i class="fa-regular fa-heart"></i>
@@ -65,43 +64,43 @@
                 <li>
                   <div class="list_element">
                     <div class="details">
-                      <h3>Tartare de poulpe acidulé</h3>
-                      <p class="desc">Aux zests d'orange</p>
+                      <h3>Tartare de thon</h3>
+                      <p class="desc">Assaisonné au yuzu</p>
                     </div>
                     <p class="price">25€</p>
                   </div>
                   <div class="list_element_hover">
-                    <span class="check_icon"
-                      ><i class="fa-solid fa-circle-check"></i
-                    ></span>
+                    <span class="check_icon">
+                      <i class="fa-solid fa-circle-check"></i>
+                    </span>
                   </div>
                 </li>
                 <li>
                   <div class="list_element">
                     <div class="details">
-                      <h3>Velouté de légumes d'antan</h3>
-                      <p class="desc">Carotte, panais, topinambour</p>
+                      <h3>Bouchée de homard croustillant</h3>
+                      <p class="desc">Et sa farandole de petits légumes</p>
                     </div>
                     <p class="price">35€</p>
                   </div>
                   <div class="list_element_hover">
-                    <span class="check_icon"
-                      ><i class="fa-solid fa-circle-check"></i
-                    ></span>
+                    <span class="check_icon">
+                      <i class="fa-solid fa-circle-check"></i>
+                    </span>
                   </div>
                 </li>
                 <li>
                   <div class="list_element">
                     <div class="details">
-                      <h3>Soupe à l'oignon</h3>
-                      <p class="desc">Revisitée</p>
+                      <h3>Velouté de cèpes</h3>
+                      <p class="desc">Aux truffes</p>
                     </div>
                     <p class="price">20€</p>
                   </div>
                   <div class="list_element_hover">
-                    <span class="check_icon"
-                      ><i class="fa-solid fa-circle-check"></i
-                    ></span>
+                    <span class="check_icon">
+                      <i class="fa-solid fa-circle-check"></i>
+                    </span>
                   </div>
                 </li>
               </ul>
@@ -112,43 +111,43 @@
                 <li>
                   <div class="list_element">
                     <div class="details">
-                      <h3>Coquilles Saint-Jacques</h3>
-                      <p class="desc">Accompagnées d'une purée de panais</p>
+                      <h3>Poulet rôti aux herbes de Provence</h3>
+                      <p class="desc">Et sa crème de truffe</p>
                     </div>
                     <p class="price">40€</p>
                   </div>
                   <div class="list_element_hover">
-                    <span class="check_icon"
-                      ><i class="fa-solid fa-circle-check"></i
-                    ></span>
+                    <span class="check_icon">
+                      <i class="fa-solid fa-circle-check"></i>
+                    </span>
                   </div>
                 </li>
                 <li>
                   <div class="list_element">
                     <div class="details">
-                      <h3>Magret de canard</h3>
-                      <p class="desc">Et parmentier de pommes de terres</p>
+                      <h3>Langouste rôtie</h3>
+                      <p class="desc">Et ses légumes de saison</p>
                     </div>
                     <p class="price">35€</p>
                   </div>
                   <div class="list_element_hover">
-                    <span class="check_icon"
-                      ><i class="fa-solid fa-circle-check"></i
-                    ></span>
+                    <span class="check_icon">
+                      <i class="fa-solid fa-circle-check"></i>
+                    </span>
                   </div>
                 </li>
                 <li>
                   <div class="list_element">
                     <div class="details">
-                      <h3>Pigeonneau d'Ille-et-Vilaine</h3>
-                      <p class="desc">Sur son lit de gnocchis aux légumes</p>
+                      <h3>Côte de boeuf Angus</h3>
+                      <p class="desc">Et sa purée de panais</p>
                     </div>
                     <p class="price">44€</p>
                   </div>
                   <div class="list_element_hover">
-                    <span class="check_icon"
-                      ><i class="fa-solid fa-circle-check"></i
-                    ></span>
+                    <span class="check_icon">
+                      <i class="fa-solid fa-circle-check"></i>
+                    </span>
                   </div>
                 </li>
               </ul>
@@ -159,43 +158,43 @@
                 <li>
                   <div class="list_element">
                     <div class="details">
-                      <h3>Pétales de violettes glacés</h3>
-                      <p class="desc">Et purée de noisettes</p>
+                      <h3>Farandole de desserts</h3>
+                      <p class="desc">Du chef</p>
                     </div>
                     <p class="price">18€</p>
                   </div>
                   <div class="list_element_hover">
-                    <span class="check_icon"
-                      ><i class="fa-solid fa-circle-check"></i
-                    ></span>
+                    <span class="check_icon">
+                      <i class="fa-solid fa-circle-check"></i>
+                    </span>
                   </div>
                 </li>
                 <li>
                   <div class="list_element">
                     <div class="details">
-                      <h3>Fondant au chocolat</h3>
+                      <h3>Crème brulée</h3>
                       <p class="desc">Revisitée</p>
                     </div>
                     <p class="price">22€</p>
                   </div>
                   <div class="list_element_hover">
-                    <span class="check_icon"
-                      ><i class="fa-solid fa-circle-check"></i
-                    ></span>
+                    <span class="check_icon">
+                      <i class="fa-solid fa-circle-check"></i>
+                    </span>
                   </div>
                 </li>
                 <li>
                   <div class="list_element">
                     <div class="details">
-                      <h3>Millefeuille croustillant</h3>
-                      <p class="desc">Myrtilles et pâte d'amande</p>
+                      <h3>Tiramisu</h3>
+                      <p class="desc">À la noisette</p>
                     </div>
                     <p class="price">23€</p>
                   </div>
                   <div class="list_element_hover">
-                    <span class="check_icon"
-                      ><i class="fa-solid fa-circle-check"></i
-                    ></span>
+                    <span class="check_icon">
+                      <i class="fa-solid fa-circle-check"></i>
+                    </span>
                   </div>
                 </li>
               </ul>
@@ -207,15 +206,15 @@
     </section>
 
     <footer>
-      <img src="images/logo/ohmyfood@2x.svg" alt="" />
+      <img src="../images/logo/ohmyfood@2x.svg" alt="" />
       <p>
         <span class="footer_icon"><i class="fa-solid fa-utensils"></i></span>
         Proposer un restaurant
       </p>
       <p>
-        <span class="footer_icon"
-          ><i class="fa-solid fa-handshake-angle"></i
-        ></span>
+        <span class="footer_icon">
+          <i class="fa-solid fa-handshake-angle"></i>
+        </span>
         Devenir partenaire
       </p>
       <p>Mentions légales</p>
@@ -224,8 +223,9 @@
           href="mailto:contact@ohmyfood.fr"
           target="_blank"
           rel="noopener noreferrer"
-          >Contact</a
         >
+          Contact
+        </a>
       </p>
     </footer>
   </body>
