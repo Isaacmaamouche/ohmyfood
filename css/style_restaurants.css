@@ -205,13 +205,11 @@ body {
 .restaurants_card .card_content .card_head .card_likeButton .icon-hollow {
   opacity: 1;
 }
-@media (hover: hover) {
-  .restaurants_card .card_content .card_head .card_likeButton:hover .icon-filled {
-    opacity: 1;
-  }
-  .restaurants_card .card_content .card_head .card_likeButton:hover .icon-hollow {
-    opacity: 0;
-  }
+.restaurants_card .card_content .card_head .card_likeButton:hover .icon-filled {
+  opacity: 1;
+}
+.restaurants_card .card_content .card_head .card_likeButton:hover .icon-hollow {
+  opacity: 0;
 }
 .restaurants_card .card_content .card_body .menu_composition:not(:last-child) {
   margin-bottom: 3.5rem;
@@ -302,20 +300,18 @@ body {
   transition: all 0.3s ease;
   transform: rotateZ(-180deg);
 }
-@media (hover: hover) {
-  .restaurants_card .card_content .card_body ul li:hover .check_icon {
-    transform: rotateZ(0deg);
-  }
-  .restaurants_card .card_content .card_body ul li:hover .list_element {
-    flex: 0 1 calc(100% - 65px);
-  }
-  .restaurants_card .card_content .card_body ul li:hover .list_element .desc,
+.restaurants_card .card_content .card_body ul li:hover .check_icon {
+  transform: rotateZ(0deg);
+}
+.restaurants_card .card_content .card_body ul li:hover .list_element {
+  flex: 0 1 calc(100% - 65px);
+}
+.restaurants_card .card_content .card_body ul li:hover .list_element .desc,
 .restaurants_card .card_content .card_body ul li:hover .list_element h3 {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    width: calc(150px + 30vw - 60px);
-  }
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: calc(150px + 30vw - 60px);
 }
 
 .main .order_button {

@@ -80,13 +80,11 @@ body {
           opacity: 1;
         }
         &:hover {
-          @media (hover: hover) {
-            .icon-filled {
-              opacity: 1;
-            }
-            .icon-hollow {
-              opacity: 0;
-            }
+          .icon-filled {
+            opacity: 1;
+          }
+          .icon-hollow {
+            opacity: 0;
           }
         }
       }
@@ -182,20 +180,18 @@ body {
             }
           }
           &:hover {
-            @media (hover: hover) {
-              .check_icon {
-                transform: rotateZ(0deg);
-              }
-              .list_element {
-                flex: 0 1 calc(100% - 65px);
-                .desc,
-                h3 {
-                  // max-width: 200px;
-                  overflow: hidden;
-                  text-overflow: ellipsis;
-                  white-space: nowrap;
-                  width: calc(150px + 30vw - 60px);
-                }
+            .check_icon {
+              transform: rotateZ(0deg);
+            }
+            .list_element {
+              flex: 0 1 calc(100% - 65px);
+              .desc,
+              h3 {
+                // max-width: 200px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                width: calc(150px + 30vw - 60px);
               }
             }
           }
