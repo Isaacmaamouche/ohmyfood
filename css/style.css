@@ -166,9 +166,8 @@ h1 {
 }
 .hero .hero_button {
   transition: all 0.3s ease;
-  --size: 2.5rem;
-  border-radius: calc(var(--size) / 2);
-  height: var(--size);
+  border-radius: 1.25rem;
+  height: 2.5rem;
   line-height: 0;
   padding: 1rem;
   color: white;
@@ -244,7 +243,7 @@ h1 {
 }
 .restaurants .restaurants_container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(375px, 30vw));
+  grid-template-columns: repeat(auto-fit, minmax(350px, 30vw));
   gap: 3rem;
   justify-content: center;
   justify-items: center;

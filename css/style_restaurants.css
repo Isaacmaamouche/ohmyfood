@@ -318,10 +318,11 @@ body {
   display: block;
   margin: auto;
   margin-bottom: 4rem;
+  font-size: 1.2rem;
+  font-weight: 500;
   transition: all 0.3s ease;
-  --size: 2.5rem;
-  border-radius: calc(var(--size) / 2);
-  height: var(--size);
+  border-radius: 1.75rem;
+  height: 3.5rem;
   line-height: 0;
   padding: 1rem;
   color: white;
@@ -330,11 +331,8 @@ body {
   background-position: 100% 0%;
   box-shadow: none;
   transform: translateY(0px);
-  font-weight: 500;
-  --size: 3.5rem;
-  font-size: 1.2rem;
-  padding-block: calc(var(--size) / 2);
-  padding-inline: var(--size);
+  padding-block: 1.75rem;
+  padding-inline: 3.5rem;
 }
 @media (hover: hover) {
   .main .order_button:hover {

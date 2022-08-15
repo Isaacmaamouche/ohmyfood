@@ -17,16 +17,14 @@ $transition: all 0.3s ease;
 
 $max-width: 992px;
 
-@mixin styled_button {
+@mixin styled_button($size: 2.5rem) {
   transition: $transition;
-  --size: 2.5rem;
-  border-radius: calc(var(--size) / 2);
-  height: var(--size);
+  border-radius: calc($size / 2);
+  height: $size;
   line-height: 0;
   padding: 1rem;
   color: white;
   background: $color_linear;
-
   background-size: 100% 125%;
   background-position: 100% 0%;
   box-shadow: none;

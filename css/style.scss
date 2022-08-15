@@ -101,7 +101,7 @@ h1 {
 
   .restaurants_container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(375px, 30vw));
+    grid-template-columns: repeat(auto-fit, minmax(350px, 30vw));
     gap: 3rem;
     justify-content: center;
     justify-items: center;
