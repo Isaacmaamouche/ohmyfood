@@ -188,7 +188,6 @@ body {
             }
             .list_element {
               flex: 0 1 calc(100% - 65px);
-              .desc,
               h3,
               .desc {
                 @media (max-width: 480px) {

@@ -313,8 +313,7 @@ body {
   flex: 0 1 calc(100% - 65px);
 }
 @media (max-width: 480px) {
-  .restaurants_card .card_content .card_body ul li:hover .list_element .desc,
-.restaurants_card .card_content .card_body ul li:hover .list_element h3,
+  .restaurants_card .card_content .card_body ul li:hover .list_element h3,
 .restaurants_card .card_content .card_body ul li:hover .list_element .desc {
     width: calc(70vw - 60px);
   }
