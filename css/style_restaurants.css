@@ -277,11 +277,17 @@ body {
 }
 .restaurants_card .card_content .card_body ul li .list_element .details h3,
 .restaurants_card .card_content .card_body ul li .list_element .details .desc {
-  width: calc(150px + 30vw);
+  width: min(350px, 70vw);
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
   transition: all 0.3s ease;
+}
+@media (max-width: 480px) {
+  .restaurants_card .card_content .card_body ul li .list_element .details h3,
+.restaurants_card .card_content .card_body ul li .list_element .details .desc {
+    width: 70vw;
+  }
 }
 .restaurants_card .card_content .card_body ul li .list_element .price {
   font-weight: 700;
@@ -306,12 +312,12 @@ body {
 .restaurants_card .card_content .card_body ul li:hover .list_element {
   flex: 0 1 calc(100% - 65px);
 }
-.restaurants_card .card_content .card_body ul li:hover .list_element .desc,
-.restaurants_card .card_content .card_body ul li:hover .list_element h3 {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  width: calc(150px + 30vw - 60px);
+@media (max-width: 480px) {
+  .restaurants_card .card_content .card_body ul li:hover .list_element .desc,
+.restaurants_card .card_content .card_body ul li:hover .list_element h3,
+.restaurants_card .card_content .card_body ul li:hover .list_element .desc {
+    width: calc(70vw - 60px);
+  }
 }
 
 .main .order_button {

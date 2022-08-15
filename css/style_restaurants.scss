@@ -153,7 +153,10 @@ body {
               }
               h3,
               .desc {
-                width: calc(150px + 30vw);
+                width: min(350px, 70vw);
+                @media (max-width: 480px) {
+                  width: 70vw;
+                }
                 overflow: hidden;
                 text-overflow: ellipsis;
                 white-space: nowrap;
@@ -186,12 +189,11 @@ body {
             .list_element {
               flex: 0 1 calc(100% - 65px);
               .desc,
-              h3 {
-                // max-width: 200px;
-                overflow: hidden;
-                text-overflow: ellipsis;
-                white-space: nowrap;
-                width: calc(150px + 30vw - 60px);
+              h3,
+              .desc {
+                @media (max-width: 480px) {
+                  width: calc(70vw - 60px);
+                }
               }
             }
           }
